@@ -8,7 +8,7 @@
 
 
 
-The framework can also be utilized for OTU-based prediciton, see the tutorial () for more details.
+The framework can also be utilized for OTU-based prediciton, see the tutorial https://github.com/Microbiods/MetaDR/blob/main/16SrRNA/OTU-level%20prediction.ipynb for more details.
 
 
 
@@ -48,7 +48,7 @@ The label file, i.e., the states or existence of a certain disease for each samp
 
 Since the OTU features are obtained by the 16S amplicon analysis pipeline, which is different from the shotgun metagenomic analysis pipeline utilized in our study, we cannot obtain the abundance profiles (or features) of unknown microbial organisms from 16S amplicon analysis. Therefore, we can only use EPCNN tool of MetaDR for disease prediction.
 
-### The tutorial can be seen from .
+### The tutorial can be seen from https://github.com/Microbiods/MetaDR/blob/main/16SrRNA/OTU-level%20prediction.ipynb.
 
 In this tutorial, we evaluated the prediction module of MetaDR on a publicly available dataset to predict type 2 diabetes (T2D). The T2D dataset was a combination of two studies [1, 2] yielding a total of 223 patients with T2D and 223 healthy subjects. We also compared MetaDR with PopPhy-CNN [3], which is a state-of-the-art tool for OTU-based prediction. 
 

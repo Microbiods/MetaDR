@@ -16,7 +16,7 @@ MetaDR can provide reference biomarkers from the combination of both known and u
 
 ### Update (25, Nov, 2021):
 
-The framework can also be utilized for OTU-based prediciton, please see here () for more details.
+The framework can also be utilized for OTU-based prediciton, please see https://github.com/Microbiods/MetaDR/tree/main/16SrRNA for more details.
 
 
 
