@@ -12,6 +12,8 @@ MetaDR is a pipeline that can integrate various information to predict human dis
 
 MetaDR can provide reference biomarkers from the combination of both known and unknown microbial organisms for the metagenomic dataset as well as achieving competitive prediction performance for human diseases.
 
+For application, we designed an operator to choose the best model from several candidate models according to the performance on the validation set, so the discrepancy on different combinations of abundance profiles and taxonomic information can be avoided since only the best model will be chosen, rather than the last ensemble model.
+
 
 
 ### Update (25, Nov, 2021):
