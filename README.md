@@ -20,6 +20,7 @@ For application, we designed an operator to choose the best model from several c
 
 The framework can also be utilized for OTU-based prediciton, please see https://github.com/Microbiods/MetaDR/tree/main/16SrRNA for more details.
 
+### Update (29, Jan, 2022):
 
 Based on our benchmark results, the deep learning-based model (EPCNN) can obtain better prediction performance on predicting Type 2 Diabetes (T2D) and Liver Cirrhosis (LC), while 
 the weighted random forest module (WRF) is more suitable for predicting Colorectal Cancer (CRC). Overall, we suggest utilizing EPCNN for disease prediction in most instances, since it can get better performance on most datasets. However, if the users don’t have a GPU to train the deep neural network on large datasets, or they simply want to extract and identify the informative microbial features, we more recommend users utilize WRF for prediction.
