@@ -12,8 +12,6 @@ MetaDR is a pipeline that can integrate various information to predict human dis
 
 MetaDR can provide reference biomarkers from the combination of both known and unknown microbial organisms for the metagenomic dataset as well as achieving competitive prediction performance for human diseases.
 
-For application, we designed an operator to choose the best model from several candidate models according to the performance on the validation set, so the discrepancy on different combinations of abundance profiles and taxonomic information can be avoided since only the best model will be chosen, rather than the last ensemble model.
-
 
 
 ### Update (25, Nov, 2021):
@@ -24,6 +22,8 @@ The framework can also be utilized for OTU-based prediciton, please see https://
 
 Based on our benchmark results, the deep learning-based module (EPCNN) obtains promising performance on predicting Type 2 Diabetes (T2D) and Liver Cirrhosis (LC), while 
 the weighted random forest module (WRF) performs better on predicting Colorectal Cancer (CRC). In conclusion, we suggest utilizing EPCNN for disease prediction in most instances, since it can achieve better performance on most datasets. However, if the related users do not have a GPU to train the deep neural network on large datasets, or they simply want to extract and identify the informative microbial features for downstream analysis, we more recommend utilizing WRF for prediction.
+
+For application, we designed an optional operator to choose the best model from several candidate models according to the performance on the validation set, so the discrepancy on different combinations of abundance profiles and taxonomic information can be avoided since only the best model will be chosen, rather than the last ensemble model. However, for most cases, the ensemble model will get better performance than the single model, only if one or more single model gets very bad performance. Therefore, the default setting of our MetaDR is still based on the final ensemble model. 
 
 # Description
 
