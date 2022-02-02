@@ -25,6 +25,27 @@ the weighted random forest module (WRF) performs better on predicting Colorectal
 
 For application, we designed an optional operator to choose the best model from several candidate models according to the performance on the validation set, so the discrepancy on different combinations of abundance profiles and taxonomic information can be avoided since only the best model will be chosen, rather than the last ensemble model. However, for most cases, the ensemble model will get better performance than the single model, only if one or more single model gets very bad performance. Therefore, the default setting of our MetaDR is still based on the final ensemble model. 
 
+In addition, a PyPI package is made available on https://pypi.org/project/MetaDR/. Besides, we have also made a tutorial for MetaDR:
+https://github.com/Microbiods/MetaDR/blob/main/test_MetaDR_pypi.ipynb.
+
+An example is shown as below"
+
+```sh
+import MetaDR
+from MetaDR import EpCNN
+from MetaDR import WeighRF
+
+### for WRF
+ens_model, known_weight, unknown_weight, ens_auc = WeighRF.train(data='Karlsson_T2D',test_split=0.3, repeat_times=1) 
+top_features = WeighRF.select(data='Karlsson_T2D', select_nums=30, repeat_times=1)  
+
+### for EPCNN
+known_level, known_postorder, unknown_level, unknown_postorder = EpCNN.phygen(data='Karlsson_T2D')  
+model_knownL,model_knownP,model_unknownL,model_unknownP, ens_auc = EpCNN.train(data='Karlsson_T2D',early_stopping=0,test_split=0.3,repeat_times=1)
+```
+
+
+
 # Description
 
 MetaDR consists of the following 2 modules:
@@ -184,7 +205,7 @@ For EPCNN:
 
 "EpCNN.train" will return 4 single models and the final ensemble prediction results.
 
-See https://github.com/Microbiods/MetaDR for more details.
+See https://pypi.org/project/MetaDR/ for more details.
 
 The tutorial for MetaDR is made available at GitHub:
 https://github.com/Microbiods/MetaDR/blob/main/test_MetaDR_pypi.ipynb
