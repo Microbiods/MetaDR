@@ -168,6 +168,27 @@ In MicroPro, the file can be directly obtained by using Mash and Centrifuge. The
 Here the first column represents the bin id of assembled contigs,  the second column represents the distributed gene for each bin, and the third column represents the taxon id for each assigned gene in the NCBI database.
 
 
+### Outputs of our MetaDR:
+
+A txt file that saves all the metrics and prediction results will be generated for each function.
+
+For WRF:
+
+"WeighRF.train" will return the final ensemble RF model, the weights for known and  unknown features, and the final ensemble prediction results.
+
+"WeighRF.select" will return the top 30 features.
+
+For EPCNN:
+
+"EpCNN.phygen" will generate four "csv" files, known_level, known_postorder, unknown_level, and unknown_postorder which represents the postorder phylogenetic-sorting based on known features, level phylogenetic-sorting based on known features, postorder phylogenetic-sortingbased on unknown features, and level phylogenetic-sorting based on unknown features.
+
+"EpCNN.train" will return 4 single models and the final ensemble prediction results.
+
+See https://github.com/Microbiods/MetaDR for more details.
+
+The tutorial for MetaDR is made available at GitHub:
+https://github.com/Microbiods/MetaDR/blob/main/test_MetaDR_pypi.ipynb
+
 
 # Running WRF
 
