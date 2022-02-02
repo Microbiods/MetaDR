@@ -13,12 +13,7 @@ MetaDR is a pipeline that can integrate various information to predict human dis
 MetaDR can provide reference biomarkers from the combination of both known and unknown microbial organisms for the metagenomic dataset as well as achieving competitive prediction performance for human diseases.
 
 
-
-### Update (25, Nov, 2021):
-
-The framework can also be utilized for OTU-based prediciton, please see https://github.com/Microbiods/MetaDR/tree/main/16SrRNA for more details.
-
-### Update (29, Jan, 2022):
+### Update (1, Feb, 2022):
 
 Based on our benchmark results, the deep learning-based module (EPCNN) obtains promising performance on predicting Type 2 Diabetes (T2D) and Liver Cirrhosis (LC), while 
 the weighted random forest module (WRF) performs better on predicting Colorectal Cancer (CRC). In conclusion, we suggest utilizing EPCNN for disease prediction in most instances, since it can achieve better performance on most datasets. However, if the related users do not have a GPU to train the deep neural network on large datasets, or they simply want to extract and identify the informative microbial features for downstream analysis, we more recommend utilizing WRF for prediction.
@@ -28,7 +23,7 @@ For application, we designed an optional operator to choose the best model from 
 In addition, a PyPI package is made available on https://pypi.org/project/MetaDR/. Besides, we have also made a tutorial for MetaDR:
 https://github.com/Microbiods/MetaDR/blob/main/test_MetaDR_pypi.ipynb.
 
-An example is shown as below"
+An example is shown as below:
 
 ```sh
 import MetaDR
@@ -44,6 +39,9 @@ known_level, known_postorder, unknown_level, unknown_postorder = EpCNN.phygen(da
 model_knownL,model_knownP,model_unknownL,model_unknownP, ens_auc = EpCNN.train(data='Karlsson_T2D',early_stopping=0,test_split=0.3,repeat_times=1)
 ```
 
+### Update (25, Nov, 2021):
+
+The framework can also be utilized for OTU-based prediciton, please see https://github.com/Microbiods/MetaDR/tree/main/16SrRNA for more details.
 
 
 # Description
